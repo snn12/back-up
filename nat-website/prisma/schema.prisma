@@ -1,0 +1,78 @@
+// NAT Corporate Website — Prisma schema
+// Mirrors specs/001-nat-corporate-website/data-model.md exactly; that document is the
+// contract, this file is its implementation.
+
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  // Prisma 7: the connection URL lives in prisma7.config.ts (CLI) and is passed
+  // explicitly to the driver adapter at runtime (lib/db.ts) — not duplicated here.
+  provider = "postgresql"
+}
+
+model PortfolioEntry {
+  id              String   @id @default(cuid())
+  name            String
+  roleDescription Json // translatable: { az: string (required), en?: string, ru?: string }
+  bio             Json // translatable: { az: string (required), en?: string, ru?: string }
+  imageUrl        String
+  externalUrl     String?
+  socialLink      String?
+  isActive        Boolean  @default(true)
+  displayOrder    Int      @default(0)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([isActive, displayOrder])
+}
+
+model PricingPlan {
+  id             String   @id @default(cuid())
+  tierName       Json // translatable: { az: string (required), en?: string, ru?: string }
+  price          Decimal  @db.Decimal(10, 2)
+  currency       String   @default("AZN")
+  billingPeriod  String?
+  features       Json // translatable: { az: string[] (required), en?: string[], ru?: string[] }
+  displayOrder   Int      @default(0)
+  isFeatured     Boolean  @default(false)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@index([displayOrder])
+}
+
+model AdminUser {
+  id                String      @id @default(cuid())
+  email             String      @unique
+  passwordHash      String
+  lastLoginAt       DateTime?
+  createdByAdminId  String?
+  createdByAdmin    AdminUser?  @relation("AdminCreatesAdmin", fields: [createdByAdminId], references: [id])
+  createdAdmins     AdminUser[] @relation("AdminCreatesAdmin")
+  createdAt         DateTime    @default(now())
+  updatedAt         DateTime    @updatedAt
+}
+
+model ContactSubmission {
+  id                     String   @id @default(cuid())
+  firstName              String
+  lastName               String
+  email                  String
+  phoneCountryCode       String
+  phoneNumber            String
+  message                String
+  consentAccepted        Boolean
+  submittedAt            DateTime @default(now())
+  readStatus             ReadStatus @default(unread)
+  emailNotificationSent  Boolean  @default(false)
+
+  @@index([readStatus, submittedAt])
+}
+
+enum ReadStatus {
+  unread
+  read
+}

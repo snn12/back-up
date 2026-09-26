@@ -1,12 +1,21 @@
-# elsen-app-backup
+# Desktop yedek (elsen-app-backup)
 
-PC reset öncesi yedek. `natttt` klasöründe sadece `__pycache__/app.cpython-314.pyc` kalmıştı,
-gerçek kaynak `elsen/app.py` (21.09.2026) buraya geri kopyalandı.
+PC reset öncesi Desktop'taki opencode/AI projelerinin tek repoda yedeği (26.09.2026).
 
 ## İçerik
 
-- `app.py` — MULTI PRO MMC Flask uygulaması (tek dosya, 1493 satır)
-- Orijinal proje: `Desktop/elsen/` (multipro.db, uploads/, partner_logos/, screen/)
+- `app.py` — MULTI PRO MMC Flask uygulaması (`Desktop/elsen/app.py`, 21.09.2026)
+- `elsen-extra/` — uploads/, multipro.db, partner_logos/, screen/
+- `aparatura/` — PyQt masaüstü uygulaması (main.py + app/*)
+- `rsi/` — trading paneli (html + rsi_btc.py; orijinal git: snn12/rsi-panel, zaten push'lu)
+- `trade/` — tools/*.py + knowledge/ (ham forexfactory verisi `data/` hariç ~53MB)
+- `example/`, `example-2/`, `new-folder/`, `nat-site/` — küçük web denemeleri
+- `nat-website/` — Next.js kurumsal site (node_modules/.next/.env hariç)
+
+## Hariç tutulanlar
+
+`node_modules/`, `.next/`, `.venv/`, iç `.git/`ler, `.env` dosyaları,
+`*.exe`ler, `trade/data/forexfactory_raw/` (~53MB ham veri ayrıca yedeklenmeli).
 
 ## Çalıştırma
 

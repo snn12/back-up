@@ -6,5 +6,11 @@ venv/
 env/
 .env
 *.log
+node_modules/
+.next/
+dist/
+build/
+*.exe
+*.pck
 .DS_Store
 Thumbs.db

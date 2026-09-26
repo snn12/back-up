@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+/*
+  NAT design tokens — structurally derived from brand-assets/design/DESIGN-reference-dala.md
+  (dark-canvas-first, oversized type trusting scale over weight, card/border-less layout,
+  single-accent-color philosophy) but re-colored with NAT's own brand palette (teal + dark-gray,
+  never Dala's violet/amber). Both a light and a dark token set are defined — constitution
+  Principle I requires every component to work in both before it is considered complete.
+
+  Theme resolution order (light is the bare :root default; dark applies via system preference
+  unless the visitor has explicitly chosen light; an explicit [data-theme] always wins):
+    1. :root                                   -> light tokens (fallback / no preference)
+    2. :root:not([data-theme="light"]) + prefers-color-scheme: dark -> dark tokens
+    3. [data-theme="dark"]                     -> dark tokens (explicit toggle, either direction)
+    4. [data-theme="light"]                    -> light tokens (explicit toggle back)
+*/
+
+:root {
+  /* Light theme (default / fallback) */
+  --color-void: #f8fafc;
+  --color-surface: #eef2f5;
+  --color-bone: #0f172a;
+  --color-ash: #475569;
+  --color-silver: #64748b;
+  --color-teal: #0891b2;
+  --color-teal-deep: #155e75;
+  --color-slate: #334155;
+  --color-hairline: rgba(15, 23, 42, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-void: #000000;
+    --color-surface: #0d1117;
+    --color-bone: #ffffff;
+    --color-ash: #9aa4ab;
+    --color-silver: #c3ccd1;
+    --color-teal: #22d3ee;
+    --color-teal-deep: #0e7490;
+    --color-slate: #475569;
+    --color-hairline: rgba(255, 255, 255, 0.14);
+  }
+}
+
+[data-theme="dark"] {
+  --color-void: #000000;
+  --color-surface: #0d1117;
+  --color-bone: #ffffff;
+  --color-ash: #9aa4ab;
+  --color-silver: #c3ccd1;
+  --color-teal: #22d3ee;
+  --color-teal-deep: #0e7490;
+  --color-slate: #475569;
+  --color-hairline: rgba(255, 255, 255, 0.14);
+}
+
+[data-theme="light"] {
+  --color-void: #f8fafc;
+  --color-surface: #eef2f5;
+  --color-bone: #0f172a;
+  --color-ash: #475569;
+  --color-silver: #64748b;
+  --color-teal: #0891b2;
+  --color-teal-deep: #155e75;
+  --color-slate: #334155;
+  --color-hairline: rgba(15, 23, 42, 0.12);
+}
+
+@theme inline {
+  /* Colors */
+  --color-void: var(--color-void);
+  --color-surface: var(--color-surface);
+  --color-bone: var(--color-bone);
+  --color-ash: var(--color-ash);
+  --color-silver: var(--color-silver);
+  --color-teal: var(--color-teal);
+  --color-teal-deep: var(--color-teal-deep);
+  --color-slate: var(--color-slate);
+  --color-hairline: var(--color-hairline);
+
+  /* Typography — scale trusts size over weight, per Dala's structural approach */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --text-caption: 12px;
+  --text-nav-label: 14px;
+  --text-body: 18px;
+  --text-heading-2xs: 24px;
+  --text-heading-xs: 27px;
+  --text-subheading: 36px;
+  --text-heading-sm: 42px;
+  --text-heading: 48px;
+  --text-heading-lg: 78px;
+  --text-display: 113px;
+
+  /* Spacing — 6px base unit */
+  --spacing-6: 6px;
+  --spacing-12: 12px;
+  --spacing-18: 18px;
+  --spacing-24: 24px;
+  --spacing-30: 30px;
+  --spacing-36: 36px;
+  --spacing-60: 60px;
+  --spacing-96: 96px;
+  --spacing-120: 120px;
+
+  /* Radius */
+  --radius-nav: 24px;
+  --radius-tag: 9999px;
+  --radius-card: 24px;
+  --radius-button: 9999px;
+}
+
+body {
+  background: var(--color-void);
+  color: var(--color-bone);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+/* Motion is opt-in everywhere: components must explicitly guard their own animation with
+   this media query rather than relying on a single global switch (constitution Principle II). */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Browser surfaces theming — the parts we didn't draw still carry the design. */
+::selection {
+  background: var(--color-teal);
+  color: var(--color-void);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 2px;
+}
+
+html {
+  scrollbar-color: var(--color-hairline) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-hairline);
+  border-radius: 9999px;
+}

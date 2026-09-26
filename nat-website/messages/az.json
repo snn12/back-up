@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "home": "Ana səhifə",
+    "services": "Xidmətlər",
+    "portfolio": "Portfolio/Müştərilərimiz",
+    "pricing": "Qiymətlər",
+    "about": "Haqqımızda",
+    "faq": "FAQ",
+    "contact": "Əlaqə",
+    "menu": "Menyu"
+  },
+  "theme": {
+    "toggle": "Tema",
+    "dark": "Tünd",
+    "light": "İşıqlı"
+  },
+  "language": {
+    "label": "Dil"
+  },
+  "footer": {
+    "description": "Restoran və kafelər üçün rəqəmsal menyu həlləri (NFC + QR) və biznes vebsaytları.",
+    "adminLogin": "Admin girişi",
+    "copyright": "Bütün hüquqlar qorunur."
+  },
+  "hero": {
+    "tagline": "Menyunu rəqəmsallaşdırmağın ən rahat yolu — NAT",
+    "cta": "Biznesinizi rəqəmsal dünyaya birlikdə daşıyaq",
+    "subbrand": "NEW AGE TECHNOLOGY"
+  },
+  "services": {
+    "label": "Xidmətlər",
+    "heading": "Nə təklif edirik",
+    "nfc": { "title": "NFC menyu", "description": "Telefonu yaxınlaşdır, menyu avtomatik açılsın." },
+    "qr": { "title": "QR menyu", "description": "Bir toxunuşla menyuya keçid." },
+    "website": { "title": "Vebsayt", "description": "Biznesiniz üçün müasir və peşəkar görünüş." }
+  },
+  "portfolio": {
+    "label": "Portfolio",
+    "heading": "Müştərilərimiz",
+    "empty": {
+      "heading": "Hələ heç bir layihə yoxdur",
+      "action": "Tezliklə əlavə olunacaq"
+    }
+  },
+  "pricing": {
+    "label": "Qiymətlər",
+    "heading": "Sadə, şəffaf qiymətləndirmə",
+    "empty": "Qiymət planları tezliklə əlavə olunacaq"
+  },
+  "about": {
+    "label": "Haqqımızda",
+    "heading": "NAT — New Age Technology",
+    "body": "Restoran və kafelərin rəqəmsal dünyaya keçidini asanlaşdırırıq — NFC və QR menyulardan tutmuş tam funksional biznes vebsaytlarına qədər, sürətli və etibarlı həllər."
+  },
+  "faq": {
+    "label": "FAQ",
+    "heading": "Tez-tez verilən suallar",
+    "items": [
+      { "q": "NFC menyu necə işləyir?", "a": "Qonaq telefonunu NFC kartına yaxınlaşdırır, menyu avtomatik açılır — heç bir tətbiq yükləmək lazım deyil." },
+      { "q": "Quraşdırma nə qədər vaxt aparır?", "a": "Adətən 1-3 iş günü ərzində saytınız/menyunuz hazır olur." },
+      { "q": "Menyunu özüm yeniləyə bilərəmmi?", "a": "Bəli, admin paneldən istədiyiniz vaxt qiymətləri və xidmətləri dəyişə bilərsiniz." }
+    ]
+  },
+  "contact": {
+    "label": "Əlaqə",
+    "heading": "Bizimlə əlaqə saxlayın",
+    "firstName": "Ad",
+    "lastName": "Soyad",
+    "email": "Email",
+    "phone": "Telefon",
+    "message": "Mesaj",
+    "consent": "Məxfilik siyasətinə razıyam.",
+    "submit": "Göndər",
+    "success": "Mesajınız göndərildi!",
+    "error": "Xəta baş verdi, yenidən cəhd edin."
+  },
+  "auth": {
+    "login": "Daxil ol",
+    "email": "Email",
+    "password": "Şifrə",
+    "submit": "Daxil ol",
+    "invalid": "Email və ya şifrə yanlışdır."
+  },
+  "admin": {
+    "sidebar": {
+      "home": "Ana səhifə",
+      "dashboard": "Dashboard",
+      "portfolio": "Əməkdaşlar",
+      "pricing": "Qiymətlər",
+      "settings": "Ayarlar"
+    }
+  }
+}

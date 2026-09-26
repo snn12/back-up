@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#0d1117"/>
+  <text x="400" y="300" text-anchor="middle" font-family="system-ui,sans-serif" font-size="48" fill="#22d3ee">Elnur Xosratov</text>
+  <text x="400" y="350" text-anchor="middle" font-family="system-ui,sans-serif" font-size="36" fill="#22d3ee">Barber</text>
+  <text x="400" y="400" text-anchor="middle" font-family="system-ui,sans-serif" font-size="20" fill="#9aa4ab">Placeholder image — real photo pending</text>
+</svg>

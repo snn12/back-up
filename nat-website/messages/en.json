@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Our Clients",
+    "pricing": "Pricing",
+    "about": "About",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "menu": "Menu"
+  },
+  "theme": {
+    "toggle": "Theme",
+    "dark": "Dark",
+    "light": "Light"
+  },
+  "language": {
+    "label": "Language"
+  },
+  "footer": {
+    "description": "Digital menu solutions (NFC + QR) and business websites for restaurants and cafes.",
+    "adminLogin": "Admin login",
+    "copyright": "All rights reserved."
+  },
+  "hero": {
+    "tagline": "The easiest way to digitize your menu — NAT",
+    "cta": "Let's take your business into the digital world together",
+    "subbrand": "NEW AGE TECHNOLOGY"
+  },
+  "services": {
+    "label": "Services",
+    "heading": "What we offer",
+    "nfc": { "title": "NFC menu", "description": "Tap your phone, the menu opens automatically." },
+    "qr": { "title": "QR menu", "description": "One tap to reach the menu." },
+    "website": { "title": "Website", "description": "A modern, professional look for your business." }
+  },
+  "portfolio": {
+    "label": "Portfolio",
+    "heading": "Our Clients",
+    "empty": {
+      "heading": "No projects yet",
+      "action": "Coming soon"
+    }
+  },
+  "pricing": {
+    "label": "Pricing",
+    "heading": "Simple, transparent pricing",
+    "empty": "Pricing plans will be added soon"
+  },
+  "about": {
+    "label": "About",
+    "heading": "NAT — New Age Technology",
+    "body": "We make it easy for restaurants and cafes to go digital — from NFC and QR menus to fully functional business websites, delivered fast and built to last."
+  },
+  "faq": {
+    "label": "FAQ",
+    "heading": "Frequently asked questions",
+    "items": [
+      { "q": "How does the NFC menu work?", "a": "The guest taps their phone on the NFC card and the menu opens automatically — no app to install." },
+      { "q": "How long does setup take?", "a": "Your site/menu is usually ready within 1-3 business days." },
+      { "q": "Can I update the menu myself?", "a": "Yes, you can change prices and services any time from the admin panel." }
+    ]
+  },
+  "contact": {
+    "label": "Contact",
+    "heading": "Get in touch",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "consent": "I agree to the privacy policy.",
+    "submit": "Send",
+    "success": "Your message was sent!",
+    "error": "Something went wrong, please try again."
+  },
+  "auth": {
+    "login": "Sign in",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Sign in",
+    "invalid": "Invalid email or password."
+  },
+  "admin": {
+    "sidebar": {
+      "home": "Home",
+      "dashboard": "Dashboard",
+      "portfolio": "Portfolio",
+      "pricing": "Pricing",
+      "settings": "Settings"
+    }
+  }
+}
